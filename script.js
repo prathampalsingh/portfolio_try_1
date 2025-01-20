@@ -22,3 +22,10 @@ window.addEventListener("DOMContentLoaded", () => {
     darkModeSwitch.checked = true;
   }
 });
+// Ensure dark mode is always enabled on page load
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("dark-mode");
+  localStorage.setItem("darkMode", "enabled");
+  const darkModeSwitch = document.getElementById("dark-mode-switch");
+  if (darkModeSwitch) darkModeSwitch.checked = true;
+});
