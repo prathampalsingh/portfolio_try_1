@@ -8,6 +8,7 @@
 }
 
 body {
+  
   font-family: "Poppins", sans-serif;
 }
 
@@ -429,4 +430,187 @@ footer {
 
 footer p {
   text-align: center;
+}
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+/* General Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+/* Ensure skill description text remains black in dark mode */
+body.dark-mode .details-container {
+  background-color: white; /* Keep white background */
+  color: black; /* Text remains black */
+}
+
+body.dark-mode .details-container h3,
+body.dark-mode .details-container p {
+  color: black; /* Ensure both headings and paragraph texts are black */
+}
+
+
+body.dark-mode p,
+body.dark-mode a {
+  color: #bbbbbb;
+}
+
+body.dark-mode .btn {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #555555;
+}
+
+/* Change Light Text to Dark Blue */
+body.dark-mode p,
+body.dark-mode .details-container p {
+  color: #003366; /* Dark Blue */
+}
+/* Dark Mode Toggle Label */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dark-mode-label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .dark-mode-label {
+  color: #fff; /* Change label color in dark mode */
+}
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #2196F3; /* Central dividing line */
+  transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-left,
+.timeline-right {
+  width: 45%;
+  padding: 1rem;
+}
+
+.timeline-left {
+  text-align: right;
+}
+
+.timeline-right {
+  text-align: left;
+}
+
+/* Styling for Date and Descriptions */
+.timeline-left h2,
+.timeline-right h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-left p,
+.timeline-right p {
+  font-size: 1rem;
+  color: #555;
+}
+
+body.dark-mode .timeline-left h2,
+body.dark-mode .timeline-right h2 {
+  color: #fff;
+}
+
+body.dark-mode .timeline-left p,
+body.dark-mode .timeline-right p {
+  color: #bbb;
+}
+
+/* Central Line Adjustment for Small Screens */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-left,
+  .timeline-right {
+    width: 90%;
+    text-align: center;
+  }
+
+  .timeline::before {
+    left: 5%;
+    width: 90%;
+    transform: translateX(0);
+  }
 }
