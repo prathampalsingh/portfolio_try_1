@@ -511,7 +511,7 @@ body.dark-mode .btn:hover {
 /* Change Light Text to Dark Blue */
 body.dark-mode p,
 body.dark-mode .details-container p {
-  color: #003366; /* Dark Blue */
+  color: white; /* Dark Blue */
 }
 /* Dark Mode Toggle Label */
 .dark-mode-toggle {
