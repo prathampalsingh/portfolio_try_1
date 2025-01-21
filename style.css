@@ -492,7 +492,9 @@ body.dark-mode .details-container h3,
 body.dark-mode .details-container p {
   color: black; /* Ensure both headings and paragraph texts are black */
 }
-
+body.dark-mode .details-container .section__text__p2 {
+  color: black; /* Ensure both headings and paragraph texts are black */
+}
 
 body.dark-mode p,
 body.dark-mode a {
@@ -595,23 +597,4 @@ body.dark-mode .timeline-right p {
   color: #bbb;
 }
 
-/* Central Line Adjustment for Small Screens */
-@media screen and (max-width: 768px) {
-  .timeline-item {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .timeline-left,
-  .timeline-right {
-    width: 90%;
-    text-align: center;
-  }
-
-  .timeline::before {
-    left: 5%;
-    width: 90%;
-    transform: translateX(0);
-  }
-}
 

@@ -101,3 +101,22 @@
     text-align: justify;
   }
 }
+/* Central Line Adjustment for Small Screens */
+/* @media screen and (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-left,
+  .timeline-right {
+    width: 90%;
+    text-align: center;
+  }
+
+  .timeline::before {
+    left: 5%;
+    width: 90%;
+    transform: translateX(0);
+  }
+} */
