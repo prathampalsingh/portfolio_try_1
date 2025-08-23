@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,7 +50,7 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Prathampal Singh Bhamrah</h1>
-        <p class="section__text__p2">Computer Engineer</p>
+        <p class="section__text__p2">Jr Software Developer</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -99,7 +98,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p2>2+ months <br />Assistant Engineer</p2>
+              <p2>9+ months <br />Jr Software Developer</p2>
             </div>
             <div class="details-container">
               <img
@@ -113,10 +112,11 @@
           </div>
           <div class="text-container">
             <p>
-              Aspiring computer engineer with a strong foundation in software development and a diverse technical
-              skill set. Eager to apply my expertise as Python, web or software developer and  on innovative projects.
-              Seeking an entry-level position to leverage my education and internship experience in contributing to
-              dynamic and growth-oriented organizations.
+              Computer engineering learner from India who grew up loving games, books, and stories that sparked my curiosity.
+              That curiosity led me into coding—and eventually, into building real mobile apps.
+              I’ve worked on Android projects involving both business features and full UI overhauls, 
+              and more recently, I’ve been creating an iOS app from scratch. I still love getting lost in a good story, 
+              but now I also enjoy crafting digital experiences of my own.
             </p>
           </div>
         </div>
@@ -130,7 +130,43 @@
     </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <h1 class="title">Experience <span id="total-experience" class="experience-counter"></span><span id="total-dots"></span></h1>
+<div class="experience-block">
+  <!-- Latest Experience -->
+  <div class="experience-item">
+    <a href="https://www.lendenclub.com/" target="_blank" rel="noopener noreferrer">
+      <img src="./assets/Lendenclub.png" alt="LenDenClub Logo" class="experience-logo">
+    </a>
+    <div class="experience-content">
+      <h2>LenDenClub <span id="lendenclub-experience" class="experience-counter"></span><span id="lendenclub-dots"></span></h2>
+      <p>LenDenClub is India's largest peer-to-peer (P2P) lending platform.</p>
+      <p>
+        My experience: While I enjoyed the clarity and focus that came with business-oriented tasks—such as revamping the 
+        <span class="highlight" data-image="./assets/portfolio.png">portfolio</span> page UI and enhancing the 
+        <span class="highlight" data-image="./assets/liveloans.png">Live Loans</span> page—my deeper interest lies in solving complex technical problems.
+        One example was migrating a large and tightly coupled 
+        <span class="highlight" data-image="./assets/dashboard.png">dashboard</span> to a modern, component-based Jetpack Compose architecture.
+      </p>
+      
+      <div id="image-popup" class="hidden">
+        <img id="popup-image" src="" alt="Popup Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Internship Experience -->
+  <div class="experience-item">
+    <a href="https://www.glassdoor.co.in/Reviews/Static-Int-Educare-Mumbai-Reviews-EI_IE8073433.0,18_IL.19,25_IM1070.htm" target="_blank" rel="noopener noreferrer">
+      <img src="./assets/staticinteducare.png" alt="StaticEducare Logo" class="experience-logo">
+    </a>
+    <div class="experience-content">
+      <h2>StaticEducare <span id="staticeducare-experience">2 months</span></h2>
+      <p>As an intern, I gained hands-on experience with a diverse technology stack, including Python, Django, Android, Flutter, Blockchain, Git, and GitHub.</p>
+      <p>I applied these tools to multiple projects.</p>
+    </div>
+  </div>
+</div>
+
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
@@ -143,7 +179,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>HTML</h3>
+                  <h3>Kotlin</h3>
                   <p>basic</p>
                 </div>
               </article>
@@ -154,7 +190,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>CSS</h3>
+                  <h3>Swift</h3>
                   <p>basic</p>
                 </div>
               </article>
@@ -176,7 +212,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>JavaScript</h3>
+                  <h3>Html</h3>
                   <p>Basic</p>
                 </div>
               </article>
@@ -205,7 +241,7 @@
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Other Skills</h2>
+            <h2 class="experience-sub-title">Hands on Experience</h2>
             <div class="article-container">
               <article>
                 <img
@@ -214,8 +250,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Mysql</h3>
-                  <p>Basic</p>
+                  <h3>Android Studio</h3>
                 </div>
               </article>
               <article>
@@ -225,8 +260,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Danjo</h3>
-                  <p>basic</p>
+                  <h3>Jetpack Compose</h3>
                 </div>
               </article>
               <article>
@@ -236,8 +270,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Flutter</h3>
-                  <p>basic</p>
+                  <h3>Jetpack Component</h3>
                 </div>
               </article>
               <article>
@@ -247,8 +280,27 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
+                  <h3>Xcode</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Swift</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Swift UI</h3>
                 </div>
               </article>
             </div>

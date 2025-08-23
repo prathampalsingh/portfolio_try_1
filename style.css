@@ -598,3 +598,103 @@ body.dark-mode .timeline-right p {
 }
 
 
+.experience-block {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 20px; /* Space between each experience item */
+  margin: 20px 0;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: row; /* Align logo and content horizontally */
+  gap: 15px; /* Space between logo and content */
+  align-items: center; /* Vertically align logo and content */
+}
+
+.experience-logo {
+  width: 120px; /* Increased width */
+  height: 120px; /* Increased height */
+  object-fit: contain; /* Ensure the logo fits without distortion */
+}
+.experience-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-content h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.experience-content p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+/* Style for experience logos */
+.experience-logo {
+  width: 120px; /* Ensure consistent width */
+  height: 120px; /* Ensure consistent height */
+  object-fit: contain; /* Maintain aspect ratio without distortion */
+  border: 2px solid #ccc; /* Add a light border */
+  border-radius: 10px; /* Add rounded corners */
+  padding: 5px; /* Add some inner spacing */
+  background-color: #f9f9f9; /* Add a subtle background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+}
+
+/* Hover effect for logos */
+.experience-logo:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+/* Style for experience counters */
+.experience-counter {
+  color: red; /* Make the text red */
+  font-weight: bold; /* Make it stand out */
+}
+
+/* Style for loading dots */
+#lendenclub-dots, #total-dots {
+  color: red; /* Match the dots color with the counter */
+  font-weight: bold;
+}
+
+/* Highlighted words */
+.highlight {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer; /* Make it look clickable */
+}
+
+/* Popup image container */
+#image-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+  display: none; /* Hidden by default */
+  z-index: 1000;
+}
+
+#image-popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+/* Hidden class */
+.hidden {
+  display: none;
+}
+
+/* Close popup on click */
+#image-popup:hover {
+  cursor: pointer;
+}

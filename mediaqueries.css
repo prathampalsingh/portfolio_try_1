@@ -123,3 +123,84 @@
     transform: translateX(0);
   }
 } */
+
+@media (max-width: 768px) {
+  .experience-block {
+    gap: 15px; /* Reduce space between items */
+  }
+
+  .experience-item {
+    flex-direction: column; /* Stack logo and content vertically */
+    align-items: center; /* Center-align the content */
+    text-align: center; /* Center-align the text */
+  }
+
+  .experience-logo {
+    width: 100px; /* Adjust logo size for mobile */
+    height: 100px;
+  }
+
+  .experience-content h2 {
+    font-size: 1rem; /* Adjust heading size for mobile */
+  }
+
+  .experience-content p {
+    font-size: 0.85rem; /* Adjust paragraph size for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  section {
+    margin: 0 1rem; /* Reduce side margins for smaller screens */
+    padding: 2rem 0; /* Add padding for better spacing */
+  }
+
+  .title {
+    font-size: 2rem; /* Adjust section title size */
+  }
+
+  .nav-links {
+    font-size: 1rem; /* Adjust navigation font size */
+  }
+
+  .btn {
+    width: auto; /* Allow buttons to resize dynamically */
+    padding: 0.5rem 1rem; /* Adjust padding for smaller buttons */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  .about-pic {
+    display: block; /* Ensure it's treated as a block element */
+    margin: 0 auto; /* Center-align the image horizontally */
+    text-align: center; /* Ensure text alignment is centered if needed */
+    max-width: 100%; /* Ensure the image doesn't overflow */
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically if needed */
+    align-items: center; /* Center-align all content in the section */
+  }
+}
+@media (max-width: 1000px) {
+  .title {
+    display: flex;
+    flex-direction: column; /* Stack the title and total experience vertically */
+    align-items: center; /* Center-align the content */
+  }
+
+  #total-experience {
+    margin-top: 0.5rem; /* Add some spacing above the total experience */
+    display: inline; /* Keep it inline with the dots */
+  }
+
+  #total-dots {
+    display: inline; /* Keep the dots inline with the counter */
+  }
+}
