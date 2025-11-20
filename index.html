@@ -4,46 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Prathampal Singh Bhamrah - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   </head>
   <body>
-    <nav id="desktop-nav">
+    <nav id="navbar">
       <div class="logo">Prathampal Singh Bhamrah</div>
-      <div>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-      <div class="dark-mode-toggle">
-        <label for="dark-mode-switch" class="dark-mode-label">Dark Mode</label>
-        <label class="switch">
-          <input type="checkbox" id="dark-mode-switch">
-          <span class="slider round"></span>
-        </label>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Prathampal Singh Bhamrah</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <div class="dark-mode-toggle">
+          <label for="dark-mode-switch" class="dark-mode-label">Dark Mode</label>
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-switch">
+            <span class="slider round"></span>
+          </label>
         </div>
       </div>
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
-    <section id="profile">
+
+    <div class="menu-links" id="mobile-menu">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </div>
+
+
+    <section id="profile" class="section-padding">
       <div class="section__pic-container">
         <img src="./assets/profile-pic.png" alt="Prathampal Singh Bhamrah profile picture" />
       </div>
@@ -78,7 +77,8 @@
         </div>
       </div>
     </section>
-    <section id="about">
+
+    <section id="about" class="section-padding">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
@@ -92,22 +92,14 @@
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
               <h3>Experience</h3>
-              <p2>8+ months <br />Jr Software Developer</p2>
+              <p>8+ months <br />Jr Software Developer</p>
             </div>
             <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
               <h3>Education</h3>
-              <p2>B.Tech <br />Diploma</p2>
+              <p>B.Tech <br />Diploma</p>
             </div>
           </div>
           <div class="text-container">
@@ -121,219 +113,192 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
-    <section id="experience">
+
+    <section id="experience" class="section-padding">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience <span id="total-experience" class="experience-counter"></span><span id="total-dots"></span></h1>
+      
 <div class="experience-block">
-  <!-- Latest Experience -->
-  <div class="experience-item">
-    <a href="https://www.lendenclub.com/" target="_blank" rel="noopener noreferrer">
-      <img src="./assets/Lendenclub.png" alt="LenDenClub Logo" class="experience-logo">
-    </a>
-    <div class="experience-content">
-      <h2>LenDenClub <span id="lendenclub-experience" class="experience-counter"></span><span id="lendenclub-dots"></span></h2>
-      <p>LenDenClub is India's largest peer-to-peer (P2P) lending platform.</p>
-      <p>
-        My experience: While I enjoyed the clarity and focus that came with business-oriented tasks—such as revamping the 
-        <span class="highlight" data-image="./assets/portfolio.png">portfolio</span> page UI and enhancing the 
-        <span class="highlight" data-image="./assets/liveloans.png">Live Loans</span> page—my deeper interest lies in solving complex technical problems.
-        One example was migrating a large and tightly coupled 
-        <span class="highlight" data-image="./assets/dashboard.png">dashboard</span> to a modern, component-based Jetpack Compose architecture.
-      </p>
-      
-      <div id="image-popup" class="hidden">
-        <img id="popup-image" src="" alt="Popup Image">
+<div class="experience-item">
+<a href="https://www.lendenclub.com/" target="_blank" rel="noopener noreferrer" class="experience-logo-link">
+<img src="./assets/Lendenclub.png" alt="LenDenClub Logo" class="experience-logo">
+</a>
+<div class="experience-content">
+ <h2>LenDenClub <span id="lendenclub-experience" class="experience-counter"></span><span id="lendenclub-dots"></span></h2>
+<p class="company-desc">LenDenClub is India's largest peer-to-peer (P2P) lending platform.</p>
+ <p class="work-desc">
+ My experience: While I enjoyed the clarity and focus that came with business-oriented tasks—such as revamping the 
+<span class="highlight">portfolio<div class="image-tooltip"><img src="./assets/portfolio.png" alt="Portfolio Screenshot"></div></span> page UI and enhancing the 
+ <span class="highlight">Live Loans<div class="image-tooltip"><img src="./assets/liveloans.png" alt="Live Loans Screenshot"></div></span>page—my deeper interest lies in solving complex technical problems.
+ One example was migrating a large and tightly coupled 
+<span class="highlight">dashboard<div class="image-tooltip"><img src="./assets/dashboard.png" alt="Dashboard Screenshot"></div></span> to a modern, component-based Jetpack Compose architecture.
+ </p>
+ </div>
+ </div>
+        
+        <div class="experience-item">
+          <a href="https://www.glassdoor.co.in/Reviews/Static-Int-Educare-Mumbai-Reviews-EI_IE8073433.0,18_IL.19,25_IM1070.htm" target="_blank" rel="noopener noreferrer" class="experience-logo-link">
+            <img src="./assets/staticinteducare.png" alt="StaticEducare Logo" class="experience-logo">
+          </a>
+          <div class="experience-content">
+            <h2>StaticEducare <span id="staticeducare-experience">2 months</span></h2>
+            <p class="company-desc">Internship experience.</p>
+            <p class="work-desc">As an intern, I gained hands-on experience with a diverse technology stack, including Python, Django, Android, Flutter, Blockchain, Git, and GitHub. I applied these tools to multiple projects.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Internship Experience -->
-  <div class="experience-item">
-    <a href="https://www.glassdoor.co.in/Reviews/Static-Int-Educare-Mumbai-Reviews-EI_IE8073433.0,18_IL.19,25_IM1070.htm" target="_blank" rel="noopener noreferrer">
-      <img src="./assets/staticinteducare.png" alt="StaticEducare Logo" class="experience-logo">
-    </a>
-    <div class="experience-content">
-      <h2>StaticEducare <span id="staticeducare-experience">2 months</span></h2>
-      <p>As an intern, I gained hands-on experience with a diverse technology stack, including Python, Django, Android, Flutter, Blockchain, Git, and GitHub.</p>
-      <p>I applied these tools to multiple projects.</p>
-    </div>
-  </div>
-</div>
-
+      <div class="experience-details-container">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Programing Languages</h2>
+          <div class="skill-article-container">
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>Kotlin</h3><p>Basic</p></div>
+            </article>
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>Swift</h3><p>Basic</p></div>
+            </article>
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>Python</h3><p>Intermediate</p></div>
+            </article>
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>Html/CSS</h3><p>Basic</p></div>
+            </article>
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>Java</h3><p>Basic</p></div>
+            </article>
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>C++</h3><p>Intermediate</p></div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Hands on Experience</h2>
+          <div class="skill-article-container">
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>Android Studio</h3></div>
+            </article>
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>Jetpack Compose</h3></div>
+            </article>
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>Jetpack Components</h3></div>
+            </article>
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>Xcode</h3></div>
+            </article>
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>Swift</h3></div>
+            </article>
+            <article>
+              <i class="fa-solid fa-check icon"></i>
+              <div><h3>Swift UI</h3></div>
+            </article>
+          </div>
+        </div>
+      </div>
       
-    <section id="projects">
-      <h1 class="title">Experience/Projects</h1>
-      <div class="timeline">
+      </section>
 
-         <!-- Timeline Item 6 - LenDenClub Experience -->
-        <div class="timeline-item">
-          <div class="timeline-right">
-            <h2>FEB - JUL 2025</h2>
-            <p><mark>LenDenClub Android APP Development</mark></p>
-            <p class="project-description">
-  I contributed to the development of the LenDenClub Android application, a high-traffic finance platform with a user base exceeding 
-  85 lakh users. The app follows a clean MVVM architecture and was originally built using an XML-driven UI. My work involved delivering 
-  several high-impact features, architectural improvements, and performance optimizations.
-
-  <br><br>
-
-  <strong>Key Contributions:</strong><br>
-  • Led the migration of the complex, performance-heavy XML-based Dashboard to Jetpack Compose, resulting in an 80% faster rendering 
-  time, smoother UI interactions, and a significantly cleaner, more modular codebase 
-  (<a href="https://www.linkedin.com/feed/update/urn:li:activity:7364979561559638016/" target="_blank" style="color: blue; text-decoration: underline;">
-  Spot Award – July 2025</a>).<br>
-
-  • Refactored and redesigned the Portfolio module, introducing responsive UI components, optimized recomposition logic, and 
-  enhanced data visualization for improved portfolio insights and user engagement.<br>
-
-  • Overhauled the user onboarding flow by streamlining the navigation graph, reducing CTA friction, and improving form validation UX, 
-  increasing onboarding completion rates by 22%.<br>
-
-  • Implemented full DeepLink support across the app, enabling seamless navigation, personalized user flows, and integration with 
-  marketing campaigns and push notifications.<br>
-
-  • Improved application stability by identifying and resolving lifecycle-related crashes, memory leaks, and redundant observers.<br>
-</p>
-
-          </div>
-          <div class="timeline-left">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <a href="https://play.google.com/store/apps/details?id=com.innofinsolutions.lendenclub.lender&hl=en_IN" target="_blank">
-                  <img src="./assets/lendenclubhardik.jpg" alt="LenDenClub App" class="project-img" />
-                </a>
+    <section id="projects" class="section-padding">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="timeline-container">
+        <div class="timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h2>January 2025: ONLINE VOTING SYSTEM</h2>
+              <p class="tech-stack"><strong>HTML, CSS, TypeScript, Angular, Java (Spring Boot), MySQL</strong></p>
+              <p class="project-description"> This project introduces an innovative online voting system, replacing traditional paper-based methods. Leveraging technologies like Angular, Spring Boot, and MySQL, it aims to enhance voter participation through a secure, automated, and streamlined platform. </p>
+              <div class="project-media-and-buttons">
+                <div class="details-container color-container">
+                  <img src="./assets/project-1.png" alt="Project 1: Online Voting System" class="project-img" />
+                </div>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/prathampalsingh/online_voting_system'">
+                  Github
+                </button>
               </div>
-              <!-- <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://play.google.com/store/apps/details?id=com.innofinsolutions.lendenclub.lender&hl=en_IN'"
-              >
-                Check out the app
-              </button> -->
             </div>
           </div>
-        </div>
-        <!-- Timeline Item 1 -->
-        <div class="timeline-item">
-          <div class="timeline-right">
-            <h2>January 2024</h2>
-            <p><mark> INDIAN SIGN LANGUAGE RECOGITION </mark> </p>
-            <p class="project-description"> This Indian Sign Language recognition app is developed using <strong>Python</strong>  with <strong>TensorFlow, Mediapipe</strong>,  and <strong>Cvzone</strong> . It leverages Google Keras for deep learning and is trained on a meticulously curated custom dataset of over 8,000 images.
-               Designed for precise and efficient gesture recognition, the app combines advanced machine learning techniques and computer vision for seamless interpretation of sign language gestures.</p>
-          </div>
-          <div class="timeline-left">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img src="./assets/project-3.png" alt="Project 1" class="project-img" />
+          
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h2>November 2024: FORMULA 1 SPRINGBOOT PROJECT</h2>
+              <p class="tech-stack"><strong>Java, Spring Boot, JPA, Hibernate, MySQL, Postman</strong></p>
+              <p class="project-description"> This Java Spring Boot application manages Formula 1 data. Users can create and manage drivers, teams, races, and results. It utilizes JPA, Hibernate, and lombok for database interactions and clean code. The RESTful API allows interaction with the MySql Database.</p>
+              <div class="project-media-and-buttons">
+                <div class="details-container color-container">
+                  <img src="./assets/project-5.png" alt="Project 2: Formula 1 Springboot Project" class="project-img" />
+                </div>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/prathampalsingh/Formula-1-Springboot-project'">
+                  Github
+                </button>
               </div>
-              <!-- <button
-    class="btn btn-color-2 project-btn"
-    onclick="location.href='https://github.com/'"
-  >
-    Github
-  </button> -->
             </div>
           </div>
-        </div>
-  
-        <!-- Timeline Item 2 -->
-        <div class="timeline-item">
-          <div class="timeline-right">
-            <h2>March 2024</h2>
-            <p><mark> BILLING SYSTEM WITH TKINTER </mark> </p>
-            <p class="project-description">This project is a versatile billing system built using <strong>Python's Tkinter</strong> library, offering a simple, user-friendly interface suitable for various needs. It includes detailed comments for easy customization and comes with a 
-              presentation file (xeroxcenter.pptx) explaining its abstract, problem definition, and features. Ideal for educational purposes or small business applications, it’s easy to set up and adapt.</p>
-  
-          </div>
-          <div class="timeline-left">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img src="./assets/project-2.png" alt="Project 1" class="project-img" />
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h2>August 2024: FLIGHT SEAT BOOKING SYSTEM</h2>
+              <p class="tech-stack"><strong>Java Fundamentals, 2D Arrays, Conditional Logic</strong></p>
+              <p class="project-description"> This project simulates a basic seat booking system, showcasing key Java fundamentals. A 2D array models the seating layout, while loops ensure continuous booking. Conditional statements handle validation and seat allocation.</p>
+              <div class="project-media-and-buttons">
+                <div class="details-container color-container">
+                  <img src="./assets/project-4.png" alt="Project 3: Flight Seat Booking System" class="project-img project-img-small" />
+                </div>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/prathampalsingh/Flight-seat-booking-system'">
+                  Github
+                </button>
               </div>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/prathampalsingh/billing-system'"
-              >
-                Github
-              </button>
             </div>
           </div>
-        </div>
-  
-        <!-- Timeline Item 3 -->
-        <div class="timeline-item">
-          <div class="timeline-right">
-            <h2>August 2024</h2>
-            <p><mark> FLIGHT SEAT BOOKING SYSTEM</mark> </p>
-            <p class="project-description"> This project simulates a basic seat booking system, showcasing key<strong> Java fundamentals</strong>. A 2D array effectively models the seating layout, while loops ensure continuous booking until the user ends the process. Conditional statements are crucial for input validation, availability checks, and seat allocation. The project utilizes methods for code organization and reusability, enhancing readability and maintainability. Input/Output operations are handled using Scanner for user input and System.out.println for displaying the seating chart and providing user feedback. By understanding and applying these core Java concepts, developers can effectively create various applications, including more sophisticated seat booking systems for real-world scenarios.
-            </p>
-          </div>
-          <div class="timeline-left">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img src="./assets/project-4.png" style="width: 50%;" alt="Project 1" class="project-img" />
+          
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h2>March 2024: BILLING SYSTEM WITH TKINTER</h2>
+              <p class="tech-stack"><strong>Python, Tkinter</strong></p>
+              <p class="project-description">This project is a versatile billing system built using Python's Tkinter library, offering a simple, user-friendly interface suitable for various needs. It includes detailed comments for easy customization and is ideal for educational purposes or small business applications.</p>
+              <div class="project-media-and-buttons">
+                <div class="details-container color-container">
+                  <img src="./assets/project-2.png" alt="Project 4: Billing System" class="project-img" />
+                </div>
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/prathampalsingh/billing-system'">
+                  Github
+                </button>
               </div>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/prathampalsingh/Flight-seat-booking-system'"
-              >
-                Github
-              </button>
             </div>
           </div>
-        </div>
-  
-        <!-- Timeline Item 4 -->
-        <div class="timeline-item">
-          <div class="timeline-right">
-            <h2>November 2024</h2>
-            <p><mark> FORMULA 1 SPRINGBOOT PROJECT </mark> </p>
-            <p class="project-description"> This Java Spring Boot application manages Formula 1 data. Users can create and manage drivers, teams, races, and results. It utilizes<strong>JPA</strong>,<strong> Hibernate</strong>, and <strong>lombok</strong> for database interactions and clean code. The RESTful API allows interaction with the <strong>MySql Database</strong>.  Key features include driver profiles, team creation with budgets and car models, race details and results management. You can test functionalities using <strong>Postman</strong>. This project offers a streamlined way to track and manage Formula 1 data.</p>
-          </div>
-          <div class="timeline-left">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img src="./assets/project-5.png  " alt="Project 1" class="project-img" />
-              </div>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/prathampalsingh/Formula-1-Springboot-project'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Timeline Item 5 -->
-        <div class="timeline-item">
-          <div class="timeline-right">
-            <h2>January 2025</h2>
-            <p><mark> ONLINE VOTING SYSTEM </mark> </p>
-            <p class="project-description"> This project introduces an innovative online voting system, replacing traditional paper-based methods. Leveraging technologies like <strong> HTML, CSS, TypeScript, Angular, Java (Spring Boot),</strong> and<strong> MySQL</strong>, it aims to enhance voter participation through a secure, automated, and streamlined platform. 
-              This digital solution promises to revolutionize elections by eliminating the inefficiencies and potential vulnerabilities associated with manual voting processes.</p>
-          </div>
-          <div class="timeline-left">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
-              </div>
-              <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/prathampalsingh/online_voting_system'">
-              Github
-            </button>
+          
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h2>January 2024: INDIAN SIGN LANGUAGE RECOGITION</h2>
+              <p class="tech-stack"><strong>Python, TensorFlow, Mediapipe, Cvzone, Google Keras</strong></p>
+              <p class="project-description"> This Indian Sign Language recognition app is developed using Python with TensorFlow, Mediapipe, and Cvzone. It leverages Google Keras for deep learning and is trained on a meticulously curated custom dataset of over 8,000 images.</p>
+              <div class="project-media-and-buttons">
+                <div class="details-container color-container">
+                  <img src="./assets/project-3.png" alt="Project 5: ISL Recognition" class="project-img" />
+                </div>
+                </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="contact">
+
+    <section id="contact" class="section-padding">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
@@ -355,19 +320,15 @@
         </div>
       </div>
     </section>
+
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
       <p>Copyright &#169; 2024 Prathampal Singh Bhamrah. All Rights Reserved.</p>
     </footer>
+
+    <div id="image-popup" class="hidden">
+      <img id="popup-image" src="" alt="Popup Image">
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

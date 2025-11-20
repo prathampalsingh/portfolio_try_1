@@ -1,206 +1,158 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-}
-
+/* BREAKPOINT 1: Large Tablets/Small Desktops (max-width: 1200px) */
+/* Targets devices from ~769px up to 1200px */
 @media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
+  /* General Layout Adjustments */
   section {
-    margin: 0 5%;
+    padding: 4vh 5%; /* Reduce horizontal padding */
+    min-height: fit-content;
+  }
+
+  /* Navigation: Hide Desktop, Show Hamburger */
+  .nav-links-container {
+    display: none; /* Hide desktop links and dark mode toggle */
+  }
+  .hamburger-icon {
+    display: flex; /* Show hamburger icon */
+  }
+
+  /* Profile Section */
+  #profile {
+    flex-direction: column; /* Stack profile pic and text vertically */
+    gap: 3rem;
+    min-height: fit-content;
+    padding-bottom: 5vh;
   }
   .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+    margin: 0 auto;
+  }
+
+  /* About Section */
+  .section-container {
+    flex-direction: column; /* Stack about picture and details vertically */
+    gap: 2rem;
   }
   .about-containers {
-    margin-top: 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
-  }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
     justify-content: center;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
+  .text-container p {
+    text-align: center; /* Center text on tablets */
+  }
+  .section__pic-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  /* Experience Section */
+  .experience-block {
+    max-width: 600px;
+  }
+  .experience-details-container {
+    flex-direction: column; /* Stack skill boxes vertically */
+    gap: 1.5rem;
+  }
+  .skill-article-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for skills on tablet */
+    justify-items: start;
+    row-gap: 1rem;
+  }
+
+  /* Contact Section */
+  .contact-info-upper-container {
+    flex-direction: column; /* Stack contact items vertically */
+    padding: 1rem;
+  }
+}
+
+
+/* BREAKPOINT 2: Mobile Devices (max-width: 768px) */
+/* Targets devices from 0px up to 768px */
+@media screen and (max-width: 768px) {
+  /* General Layout Adjustments */
+  section {
+    padding: 4vh 1rem; /* Very small side margins */
   }
   .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
-  .text-container {
+
+  /* Profile Section */
+  .section__text__p2 {
+    font-size: 1.5rem;
+  }
+  .section__pic-container {
+    width: 200px;
+    height: 200px;
+  }
+  .btn-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.75rem;
+  }
+  .btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  /* About Section */
+  .about-containers {
+    flex-direction: column; /* Stack experience/education boxes vertically */
+    gap: 1rem;
+  }
+  .details-container {
+    padding: 1rem;
+  }
+  .text-container p {
     text-align: justify;
   }
-  .project-description {
-    display: none;
-  }
-}
-/* Central Line Adjustment for Small Screens */
-/* @media screen and (max-width: 768px) {
-  .timeline-item {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .timeline-left,
-  .timeline-right {
-    width: 90%;
-    text-align: center;
-  }
-
-  .timeline::before {
-    left: 5%;
-    width: 90%;
-    transform: translateX(0);
-  }
-} */
-
-@media (max-width: 768px) {
-  .experience-block {
-    gap: 15px; /* Reduce space between items */
-  }
-
+  /* Experience Section */
   .experience-item {
     flex-direction: column; /* Stack logo and content vertically */
-    align-items: center; /* Center-align the content */
-    text-align: center; /* Center-align the text */
+    align-items: center; /* Center-align */
+    text-align: center;
   }
-
+  .experience-content {
+      align-items: center;
+  }
   .experience-logo {
-    width: 100px; /* Adjust logo size for mobile */
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
-
-  .experience-content h2 {
-    font-size: 1rem; /* Adjust heading size for mobile */
-  }
-
-  .experience-content p {
-    font-size: 0.85rem; /* Adjust paragraph size for mobile */
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    margin: 0;
+  .skill-article-container {
+    grid-template-columns: 1fr; /* Single column for skills on mobile */
+    gap: 1rem;
     padding: 0;
   }
-
-  section {
-    margin: 0 1rem; /* Reduce side margins for smaller screens */
-    padding: 2rem 0; /* Add padding for better spacing */
+  article {
+    justify-content: center;
+  }
+  
+  /* Projects Section: Timeline Mobile Optimization */
+  .timeline-container {
+      margin: 2rem auto;
+  }
+  .timeline::before {
+    display: none; /* Hide central line on mobile */
+  }
+  .timeline-item {
+      padding: 0;
+      margin-bottom: 2.5rem;
+      border: 1px solid #eee; /* Add subtle border for separation */
+      border-radius: 10px;
+  }
+  .timeline-content {
+      padding: 1rem;
+      box-shadow: none; /* Remove shadow */
+  }
+  .project-description {
+      text-align: justify;
+  }
+  .project-media-and-buttons {
+      /* Already set to stack vertically */
   }
 
-  .title {
-    font-size: 2rem; /* Adjust section title size */
-  }
-
-  .nav-links {
-    font-size: 1rem; /* Adjust navigation font size */
-  }
-
-  .btn {
-    width: auto; /* Allow buttons to resize dynamically */
-    padding: 0.5rem 1rem; /* Adjust padding for smaller buttons */
-  }
-}
-
-@media (min-width: 601px) and (max-width: 1200px) {
-  .about-pic {
-    display: block; /* Ensure it's treated as a block element */
-    margin: 0 auto; /* Center-align the image horizontally */
-    text-align: center; /* Ensure text alignment is centered if needed */
-    max-width: 100%; /* Ensure the image doesn't overflow */
-  }
-
-  .about-section {
-    display: flex;
-    flex-direction: column; /* Stack content vertically if needed */
-    align-items: center; /* Center-align all content in the section */
-  }
-}
-@media (max-width: 1000px) {
-  .title {
-    display: flex;
-    flex-direction: column; /* Stack the title and total experience vertically */
-    align-items: center; /* Center-align the content */
-  }
-
-  #total-experience {
-    margin-top: 0.5rem; /* Add some spacing above the total experience */
-    display: inline; /* Keep it inline with the dots */
-  }
-
-  #total-dots {
-    display: inline; /* Keep the dots inline with the counter */
+  /* Footer */
+  footer {
+    height: fit-content;
+    padding: 1rem;
   }
 }
