@@ -295,24 +295,25 @@ section {
 }
 
 .details-container {
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
+  flex: 1 1 auto; /* Allow dynamic sizing based on content */
+  box-sizing: border-box; /* Include padding and border in size */
+  padding: 1.5rem; /* Add padding inside the box */
+  background: white; /* Ensure white background */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items at the top */
+  align-items: center; /* Center items horizontally */
+  padding: 1.5rem; /* Add padding inside the box */
+  width: 100%; /* Ensure full width */
 }
 
-.section-container {
-  gap: 4rem;
-  height: 80%;
-}
-
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+.article-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap properly */
+  justify-content: center; /* Center items horizontally */
+  gap: 1rem; /* Add spacing between items */
 }
 
 /* EXPERIENCE SECTION */
@@ -330,17 +331,27 @@ section {
 
 .experience-details-container {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap; /* Ensure items wrap properly */
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items at the top */
+  gap: 2rem; /* Add spacing between items */
+  margin-top: 2rem; /* Add spacing above the container */
 }
 
 .article-container {
   display: flex;
-  text-align: initial;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Full height of the white box */
+  text-align: center; /* Ensure text alignment is centered */
   flex-wrap: wrap;
   flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap properly */
+  justify-content: center; /* Center items horizontally */
+  gap: 1rem; /* Add spacing between items */
 }
 
 article {
@@ -369,6 +380,10 @@ article .icon {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
+  max-width: 100%; /* Prevent overflow */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 90%; /* Slightly reduce width to ensure proper centering */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .project-title {
